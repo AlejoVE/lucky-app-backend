@@ -2,9 +2,11 @@ const User = require('../models/UserModel');
 
 const registerUser = async (req, res) => {
 	const { firstName, lastName, email } = req.body;
-	const user = User.find({ email }).exec();
+	const user =  await User.find({ email }).exec();
+	const isExists = user.length>0
+	
 
-	if (user) {
+	if (isExists) {
 		res.status(400).json({ msg: 'This email already exists' });
 		return;
 	}
