@@ -17,7 +17,7 @@ Small technical test.
 
 ```
 PORT=$port_number
-DB_CONNECT=mongodb://localhost:27017/$db_name
+DB_CNN=mongodb://localhost:27017/$db_name
 REACT_APP_API_URL=$http://localhost:12345/
 ```
 
