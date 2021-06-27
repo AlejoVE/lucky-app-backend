@@ -6,12 +6,15 @@ const userSchema = Schema(
 			type: String,
 			required: true,
 		},
-        lastName: {
-            type: String,
-        },
+		lastName: {
+			type: String,
+		},
 		email: {
 			type: String,
 			require: true,
+		},
+		subscribe: {
+			type: Boolean,
 		},
 	},
 	{ timestamps: true }

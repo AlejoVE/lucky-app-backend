@@ -1,7 +1,7 @@
 const User = require('../models/UserModel');
 
 const registerUser = async (req, res) => {
-	const { firstName, lastName, email } = req.body;
+	const { firstName, lastName, email, subscribe } = req.body;
 	const user =  await User.find({ email }).exec();
 	const isExists = user.length>0
 	
@@ -12,7 +12,7 @@ const registerUser = async (req, res) => {
 	}
 
 	try {
-		await User.create({ firstName, lastName, email });
+		await User.create({ firstName, lastName, email, subscribe });
 		res.status(201).json({ msg: 'User created successfully' });
 	} catch (error) {
 		res.status(500).json({ msg: 'Something bad happened, please try later' });
