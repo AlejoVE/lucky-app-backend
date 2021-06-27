@@ -1,4 +1,4 @@
-# Mwenbwa
+# Lucky Test
 
 Small technical test.
 
